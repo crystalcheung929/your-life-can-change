@@ -187,7 +187,12 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:12px;color:var(
 
       <p class="fine">完成付款並由後台人員核實收到款項後，PDF 下載連結會透過 Email 發送給你。</p>
       <p class="fine" style="margin-top:18px">數碼產品付款後恕不退換，請在付款前確認購買意願。</p>
-    </form>
+   
+      <button type="submit" class="btn full" id="submitOrder">
+        提交購買資料
+      </button>
+      <p id="submitMessage" role="status"></p>
+ </form>
   </div>
 </section>
 </main>
@@ -198,15 +203,58 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:12px;color:var(
   </div>
 </footer>
 
+
 <script>
-document.getElementById('copyFPS').addEventListener('click',async function(){
+document.getElementById("copyFPS").addEventListener("click", async function () {
   try {
-    await navigator.clipboard.writeText('6913016');
-    document.getElementById('copyMessage').textContent='已複製 FPS 號碼。';
-  } catch(e) {
-    document.getElementById('copyMessage').textContent='請手動複製：6913016';
+    await navigator.clipboard.writeText("6913016");
+    document.getElementById("copyMessage").textContent = "已複製 FPS 號碼。";
+  } catch (e) {
+    document.getElementById("copyMessage").textContent = "請手動複製：6913016";
+  }
+});
+
+const orderForm = document.getElementById("orderForm");
+const submitButton = document.getElementById("submitOrder");
+const submitMessage = document.getElementById("submitMessage");
+
+orderForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  if (!orderForm.reportValidity()) return;
+
+  submitButton.disabled = true;
+  submitButton.textContent = "提交中，請稍候…";
+  submitMessage.textContent = "";
+
+  try {
+    const response = await fetch(
+      "https://nirmcwcxwpedpnopbswp.supabase.co/functions/v1/submit-pdf-order",
+      {
+        method: "POST",
+        headers: {
+          "apikey": "sb_publishable_AqQYBXn3V1i2BjNxCC3LMA_hIMpAsTX"
+        },
+        body: new FormData(orderForm)
+      }
+    );
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.error || "提交失敗，請稍後再試。");
+    }
+
+    submitMessage.textContent =
+      `訂單已提交，編號：${result.order_number}。請等待核實付款。`;
+
+    orderForm.reset();
+    submitButton.textContent = "提交成功";
+  } catch (error) {
+    submitMessage.textContent =
+      error.message || "提交失敗，請稍後再試。";
+    submitButton.disabled = false;
+    submitButton.textContent = "重新提交";
   }
 });
 </script>
-</body>
-</html>
