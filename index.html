@@ -18,13 +18,9 @@
   --green: #53684e;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -35,9 +31,7 @@ body {
   line-height: 1.8;
 }
 
-a {
-  color: inherit;
-}
+a { color: inherit; }
 
 .wrap {
   width: min(1080px, 92%);
@@ -133,17 +127,11 @@ h1 em {
   line-height: 1.45;
 }
 
-.buybox .fine {
-  line-height: 1.45;
-}
+.buybox .fine { line-height: 1.45; }
 
-.section {
-  padding: 68px 0;
-}
+.section { padding: 68px 0; }
 
-.section.white {
-  background: var(--paper);
-}
+.section.white { background: var(--paper); }
 
 .kicker {
   color: var(--gold-dark);
@@ -164,13 +152,9 @@ h2 {
   color: #48483f;
 }
 
-.prose p {
-  margin: 0 0 17px;
-}
+.prose p { margin: 0 0 17px; }
 
-.prose li {
-  margin: 0 0 14px;
-}
+.prose li { margin: 0 0 14px; }
 
 .callout {
   border-left: 3px solid var(--gold);
@@ -201,16 +185,9 @@ h2 {
   color: var(--gold-dark);
 }
 
-.card h3 {
-  margin: 8px 0;
-  font-size: 19px;
-}
+.card h3 { margin: 8px 0; font-size: 19px; }
 
-.card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 15px;
-}
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
 
 .buy-grid {
   display: grid;
@@ -259,9 +236,7 @@ h2 {
   padding: 26px;
 }
 
-.field {
-  margin: 0 0 18px;
-}
+.field { margin: 0 0 18px; }
 
 .field label {
   display: block;
@@ -286,10 +261,7 @@ h2 {
   resize: vertical;
 }
 
-.hint {
-  font-size: 12px;
-  color: var(--muted);
-}
+.hint { font-size: 12px; color: var(--muted); }
 
 .notice {
   padding: 13px 15px;
@@ -299,10 +271,7 @@ h2 {
   font-size: 13px;
 }
 
-.fine {
-  font-size: 12px;
-  color: var(--muted);
-}
+.fine { font-size: 12px; color: var(--muted); }
 
 footer {
   padding: 28px 0;
@@ -312,20 +281,21 @@ footer {
   text-align: center;
 }
 
-.full {
-  width: 100%;
-}
+.full { width: 100%; }
 
-/* 強制顯示提交按鈕 */
+/* 黃色提交按鈕 */
 #submitOrder {
   display: flex !important;
   width: 100%;
   min-height: 60px;
   margin-top: 24px;
+  padding: 14px 23px;
+  align-items: center;
+  justify-content: center;
   font-size: 18px;
   font-weight: 800;
-  background: #53684e;
-  color: #fff;
+  background: #d5a83d !important;
+  color: #211d12 !important;
   border: 0;
   border-radius: 8px;
   cursor: pointer;
@@ -336,7 +306,7 @@ footer {
 }
 
 #submitOrder:hover {
-  background: #40543a;
+  background: #e2ba5a !important;
 }
 
 #submitOrder:disabled {
@@ -352,34 +322,20 @@ footer {
 }
 
 @media (max-width: 760px) {
-  .hero {
-    padding: 48px 0;
-  }
+  .hero { padding: 48px 0; }
 
   .hero-grid,
-  .buy-grid {
-    grid-template-columns: 1fr;
-  }
+  .buy-grid { grid-template-columns: 1fr; }
 
-  .cards {
-    grid-template-columns: 1fr;
-  }
+  .cards { grid-template-columns: 1fr; }
 
-  .buybox {
-    position: static;
-  }
+  .buybox { position: static; }
 
-  .section {
-    padding: 48px 0;
-  }
+  .section { padding: 48px 0; }
 
-  .price-row {
-    flex-wrap: wrap;
-  }
+  .price-row { flex-wrap: wrap; }
 
-  .form {
-    padding: 18px;
-  }
+  .form { padding: 18px; }
 }
 </style>
 </head>
@@ -458,7 +414,6 @@ footer {
 
 <section class="section" id="order">
   <div class="wrap" style="max-width:760px">
-
     <h2>填寫購買資料</h2>
     <p>請先填妥以下所有資料及反思問題，再選擇付款方式。</p>
 
@@ -497,17 +452,12 @@ footer {
         <a class="btn full"
            href="https://payme.hsbc/ccrystaltal"
            target="_blank"
-           rel="noopener">
-          以 PayMe 付款
-        </a>
+           rel="noopener">以 PayMe 付款</a>
 
         <div style="margin-top:10px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:8px">
           <strong>轉數快 FPS：6913016</strong>
 
-          <button type="button"
-                  id="copyFPS"
-                  class="btn"
-                  style="padding:7px 12px;margin-left:8px">
+          <button type="button" id="copyFPS" class="btn" style="padding:7px 12px;margin-left:8px">
             複製 FPS
           </button>
 
@@ -521,15 +471,8 @@ footer {
 
       <div class="field">
         <label for="proof">付款截圖 *</label>
-        <input id="proof"
-               name="proof"
-               type="file"
-               accept="image/png,image/jpeg,image/webp"
-               required>
-
-        <div class="hint">
-          請上傳 PayMe 或轉數快付款截圖，方便核對訂單。
-        </div>
+        <input id="proof" name="proof" type="file" accept="image/png,image/jpeg,image/webp" required>
+        <div class="hint">請上傳 PayMe 或轉數快付款截圖，方便核對訂單。</div>
       </div>
 
       <div class="field">
@@ -547,12 +490,8 @@ footer {
         數碼產品付款後恕不退換，請在付款前確認購買意願。
       </p>
 
-      <p style="margin-top:22px;font-weight:700">
-        最後一步：確認資料已填妥，然後按下方綠色按鈕提交。
-      </p>
-
       <button type="submit" class="btn full" id="submitOrder">
-        提交購買資料
+        提交
       </button>
 
       <p id="submitMessage" role="status" aria-live="polite"></p>
@@ -617,7 +556,7 @@ orderForm.addEventListener("submit", async function (event) {
   }
 
   submitButton.disabled = true;
-  submitButton.textContent = "提交中，請稍候…";
+  submitButton.textContent = "提交中…";
   submitMessage.textContent = "正在提交訂單，請勿關閉此頁面。";
 
   try {
@@ -647,7 +586,7 @@ orderForm.addEventListener("submit", async function (event) {
       (result.order_number || "已建立") +
       "。請等待核實付款。";
 
-    submitButton.textContent = "訂單已提交";
+    submitButton.textContent = "提交";
     orderForm.reset();
 
   } catch (error) {
@@ -655,7 +594,7 @@ orderForm.addEventListener("submit", async function (event) {
       error.message || "提交失敗，請稍後再試。";
 
     submitButton.disabled = false;
-    submitButton.textContent = "重新提交";
+    submitButton.textContent = "提交";
   }
 });
 </script>
