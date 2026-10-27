@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fffdf7">
+  <meta name="description" content="重新思考人生、信念、財富與選擇。《最神奇的24堂課》43章精華 PDF，HK$68。">
+  <title>Your Life Can Change｜你的人生，真的只能這樣嗎？</title>
+
+  <style>
+    :root {
+      --yellow: #f4d35e;
+      --yellow-dark: #d8ac20;
+      --ink: #282820;
+      --muted: #77776d;
+      --cream: #fffdf7;
+      --white: #ffffff;
+      --line: #e9e4d7;
+      --green: #526b49;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Noto Sans TC", "PingFang TC", sans-serif;
+      line-height: 1.8;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 76px 0 68px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 15px;
+      border: 1px solid #eadb9e;
+      border-radius: 30px;
+      background: #fff8d9;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin: 26px auto 18px;
+      max-width: 800px;
+      font-size: clamp(34px, 6vw, 62px);
+      line-height: 1.3;
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      background: linear-gradient(transparent 65%, var(--yellow) 65%);
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 27px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--white);
+      font: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s, opacity .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: .9;
+    }
+
+    .button-yellow {
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .trust {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    section { padding: 65px 0; }
+
+    .section-title {
+      margin: 0 0 12px;
+      text-align: center;
+      font-size: clamp(26px, 4vw, 38px);
+      line-height: 1.4;
+    }
+
+    .section-desc {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--white);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .icon {
+      margin-bottom: 12px;
+      font-size: 27px;
+    }
+
+    .yellow-section {
+      background: #fff8df;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .topic {
+      padding: 17px;
+      border: 1px solid #eee4bf;
+      border-radius: 10px;
+      background: rgba(255,255,255,.75);
+      font-weight: 600;
+    }
+
+    .quote {
+      max-width: 760px;
+      margin: auto;
+      padding: 34px;
+      border-left: 4px solid var(--yellow-dark);
+      background: white;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .quote small {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .purchase {
+      background: #f7f5ee;
+    }
+
+    .purchase-card {
+      max-width: 720px;
+      margin: auto;
+      padding: clamp(22px, 5vw, 46px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+      box-shadow: 0 12px 40px rgba(45, 40, 20, .05);
+    }
+
+    .product-label {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .product-title {
+      margin: 10px 0;
+      font-size: clamp(24px, 4vw, 34px);
+      line-height: 1.5;
+    }
+
+    .price {
+      margin: 15px 0;
+      font-size: 46px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .price small {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .checklist {
+      padding: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      margin: 8px 0;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      margin-right: 10px;
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .divider {
+      height: 1px;
+      margin: 25px 0;
+      background: var(--line);
+    }
+
+    .field { margin-bottom: 18px; }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .optional {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #dcd8cc;
+      border-radius: 7px;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+      font-size: 15px;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: 2px solid #ead27b;
+      border-color: var(--yellow-dark);
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      font-size: 13px;
+    }
+
+    .help {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 10px 0;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .payment-option input {
+      width: auto;
+      margin-top: 7px;
+    }
+
+    .payment-option strong { display: block; }
+
+    .payment-option small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .payme-link {
+      display: inline-block;
+      margin: 8px 0 14px;
+      color: #3b6042;
+      font-weight: 700;
+    }
+
+    .notice {
+      padding: 13px;
+      border-radius: 8px;
+      background: #fff8df;
+      color: #68551a;
+      font-size: 13px;
+    }
+
+    .terms {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 18px 0;
+      font-size: 13px;
+    }
+
+    .terms input {
+      width: auto;
+      margin-top: 7px;
+    }
+
+    .submit {
+      width: 100%;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    .not-connected {
+      margin-top: 14px;
+      padding: 12px;
+      border: 1px solid #e7d7a1;
+      border-radius: 8px;
+      background: #fff9e5;
+      color: #6e5b21;
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer a { margin: 0 8px; }
+
+    @media (max-width: 680px) {
+      .hero { padding: 52px 0; }
+      .intro-grid { grid-template-columns: 1fr; }
+      .topics { grid-template-columns: 1fr 1fr; }
+      section { padding: 48px 0; }
+      .card { padding: 22px; }
+      .quote { padding: 24px; font-size: 18px; }
+      .nav a { font-size: 12px; }
+    }
+
+    @media (max-width: 390px) {
+      .topics { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Your Life Can Change.</div>
+      <a href="#product">了解精華 PDF ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">YOUR LIFE CAN CHANGE</div>
+
+        <h1>
+          你的人生，<br>
+          <span>真的只能這樣嗎？</span>
+        </h1>
+
+        <p>
+          有時候，限制我們的未必是環境，而是一直以來深信不疑的想法。
+          重新思考自己的信念、選擇與行動，探索人生更多可能。
+        </p>
+
+        <a class="button button-yellow" href="#product">
+          開始重新思考自己的人生
+        </a>
+
+        <div class="trust">
+          43 章精華整理・反思問題・實踐工作表
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 class="section-title">你有沒有試過這樣想？</h2>
+        <p class="section-desc">
+          明明想改變，卻總是回到熟悉的生活模式。
+          也許值得停下來，重新審視自己的想法。
+        </p>
+
+        <div class="intro-grid">
+          <article class="card">
+            <div class="icon">🌱</div>
+            <h3>想改變，卻不知道從哪裡開始</h3>
+            <p>
+              當生活陷入重複，透過閱讀與反思，
+              重新整理自己真正重視的事情。
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🧠</div>
+            <h3>有些限制，可能來自自己的信念</h3>
+            <p>
+              探索思想如何影響決定，
+              並思考哪些觀念值得保留、哪些值得重新檢視。
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🎯</div>
+            <h3>想過不一樣的人生</h3>
+            <p>
+              將模糊的願望整理成清晰方向，
+              再思考可以從哪一個小行動開始。
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📖</div>
+            <h3>想學習，但不想只看理論</h3>
+            <p>
+              除了章節精華，亦有反思問題及工作表，
+              幫助你把閱讀變成個人思考練習。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="yellow-section">
+      <div class="wrap">
+        <h2 class="section-title">43 章精華，探索不同人生課題</h2>
+        <p class="section-desc">
+          從思想與信念出發，延伸至目標、行動、財富、人際關係及個人成長。
+        </p>
+
+        <div class="topics">
+          <div class="topic">01　思想與潛意識</div>
+          <div class="topic">02　信念與自我認知</div>
+          <div class="topic">03　目標與人生方向</div>
+          <div class="topic">04　行動與習慣</div>
+          <div class="topic">05　財富與豐盛思維</div>
+          <div class="topic">06　人際關係與溝通</div>
+          <div class="topic">07　個人成長與改變</div>
+          <div class="topic">08　反思與實踐</div>
+          <div class="topic">09　整理屬於自己的人生觀</div>
+        </div>
+
+        <p class="help" style="text-align:center;margin-top:20px">
+          以上為內容主題概覽，並非原書逐章目錄。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="quote">
+          改變未必由一個巨大的決定開始，
+          也可以由重新問自己一個問題開始。
+          <small>給願意重新思考人生的你</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" class="purchase">
+      <div class="wrap">
+        <h2 class="section-title">把思考帶回自己的生活</h2>
+        <p class="section-desc">
+          一份可以慢慢閱讀、重複翻閱及自行反思的數碼精華整理。
+        </p>
+
+        <div class="purchase-card">
+          <div class="product-label">DIGITAL PDF EDITION</div>
+
+          <h3 class="product-title">
+            你的人生，真的只能這樣嗎？<br>
+            《最神奇的24堂課》43章精華 PDF
+          </h3>
+
+          <div class="price">HK$68 <small>一次付款</small></div>
+
+          <ul class="checklist">
+            <li>43 章精華內容整理</li>
+            <li>思想、信念、目標及行動等主題</li>
+            <li>作者個人見解與經歷</li>
+            <li>部分章節附反思問題及實踐練習</li>
+            <li>可重複使用的工作表</li>
+            <li>數碼 PDF，方便自行閱讀</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h3>填寫購買資料</h3>
+          <p class="help">
+            請填寫正確的 Email，以便收到訂單通知及產品交付資訊。
+            以下表格目前尚未連接訂單後端。
+          </p>
+
+          <form id="order-form">
+            <div class="field">
+              <label for="customer-name">姓名 *</label>
+              <input id="customer-name" name="customer_name"
+                type="text" autocomplete="name" required
+                maxlength="100" placeholder="請輸入姓名">
+            </div>
+
+            <div class="field">
+              <label for="customer-email">Email *</label>
+              <input id="customer-email" name="customer_email"
+                type="email" autocomplete="email" required
+                maxlength="254" placeholder="you@example.com">
+            </div>
+
+            <div class="field">
+              <label for="customer-phone">
+                聯絡電話 <span class="optional">（選填）</span>
+              </label>
+              <input id="customer-phone" name="customer_phone"
+                type="tel" autocomplete="tel" maxlength="30"
+                placeholder="如有需要，可填寫電話">
+            </div>
+
+            <div class="field">
+              <label for="reflection-bottleneck">
+                你現階段最想突破的人生瓶頸是甚麼？
+                <span class="optional">（選填）</span>
+              </label>
+              <textarea id="reflection-bottleneck"
+                name="reflection_bottleneck" rows="3"
+                maxlength="2000"
+                placeholder="可以留空，不需要分享私人內容。"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="reflection-goal">
+                如果你能改變目前的狀況，你最希望自己的人生有甚麼不同？
+                <span class="optional">（選填）</span>
+              </label>
+              <textarea id="reflection-goal" name="reflection_goal"
+                rows="3" maxlength="2000"
+                placeholder="可以留空。"></textarea>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3>選擇付款方式</h3>
+
+            <label class="payment-option">
+              <input type="radio" name="payment_method"
+                value="PayMe" required>
+              <span>
+                <strong>PayMe</strong>
+                <small>透過 PayMe 付款</small>
+              </span>
+            </label>
+
+            <label class="payment-option">
+              <input type="radio" name="payment_method"
+                value="FPS" required>
+              <span>
+                <strong>轉數快 FPS</strong>
+                <small>按照賣家提供的收款資料付款</small>
+              </span>
+            </label>
+
+            <div class="notice">
+              付款前請確認收款人資料及金額正確。
+              本網站目前尚未接通自動收款核實功能。
+            </div>
+
+            <p>
+              <a class="payme-link"
+                href="http://payme.hsbc/ccrystaltal"
+                target="_blank" rel="noopener noreferrer">
+                開啟 PayMe 付款頁面 ↗
+              </a>
+            </p>
+
+            <div class="field">
+              <label for="payment-proof">
+                付款截圖 <span class="optional">（暫未啟用上傳）</span>
+              </label>
+              <input id="payment-proof" type="file"
+                accept="image/jpeg,image/png,image/webp" disabled>
+              <p class="help">
+                完成安全後端設定後，才會啟用付款截圖上傳。
+                請勿透過此原型提交私人付款資料。
+              </p>
+            </div>
+
+            <label class="terms">
+              <input type="checkbox" id="agree-terms" required>
+              <span>
+                我已確認購買《最神奇的24堂課》43章精華 PDF。
+                我明白這是數碼產品，正式購買條款及適用法律
+                會在網站正式上線前確認。
+              </span>
+            </label>
+
+            <button class="button submit" type="submit">
+              提交購買資料
+            </button>
+
+            <div class="not-connected">
+              <strong>網站建置中：</strong>
+              訂單提交、付款截圖上傳、管理員核實及 PDF 電郵交付
+              尚未連接。此表格目前不會傳送或儲存你的資料。
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Your Life Can Change</strong>
+      <p>重新思考人生，探索更多可能。</p>
+      <a href="#product">產品資訊</a>
+      <span>｜</span>
+      <a href="mailto:">聯絡我們（Email 待設定）</a>
+      <p>© <span id="year"></span> Your Life Can Change</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("order-form").addEventListener(
+      "submit",
+      function (event) {
+        event.preventDefault();
+        alert(
+          "網站仍在設定中，訂單尚未提交。請稍後再購買。"
+        );
+      }
+    );
+  </script>
+</body>
+</html>
