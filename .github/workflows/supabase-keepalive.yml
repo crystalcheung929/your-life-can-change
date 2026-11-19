@@ -1,0 +1,31 @@
+
+name: Supabase Keep Alive
+
+on:
+  schedule:
+    - cron: "0 0,8,16 * * *"
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send read-only database request
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "Missing Supabase secrets"
+            exit 1
+          fi
+
+          curl --silent --show-error \
+            --output response.txt \
+            --write-out "HTTP status: %{http_code}\n" \
+            "$SUPABASE_URL/rest/v1/pdf_orders?select=id&limit=1" \
+            --header "apikey: $SUPABASE_ANON_KEY" \
+            --header "Authorization: Bearer $SUPABASE_ANON_KEY"
+
+          cat response.txt
