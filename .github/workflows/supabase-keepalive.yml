@@ -24,7 +24,7 @@ jobs:
           curl --silent --show-error \
             --output response.txt \
             --write-out "HTTP status: %{http_code}\n" \
-            "$SUPABASE_URL/rest/v1/pdf_orders?select=id&limit=1" \
+            "$SUPABASE_URL/rest/v1/keepalive?select=id&limit=1" \
             --header "apikey: $SUPABASE_ANON_KEY" \
             --header "Authorization: Bearer $SUPABASE_ANON_KEY"
 
